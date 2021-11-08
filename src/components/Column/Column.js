@@ -5,6 +5,7 @@ import Card from '../Card/Card';
 //import Creator from '../Creator/Creator';
 //import { settings } from '../../data/dataStore';
 import Icon from '../Icon/Icon';
+import { settings } from '../../data/dataStore';
 
 
 class Column extends React.Component {
@@ -14,6 +15,10 @@ class Column extends React.Component {
     cards: PropTypes.string,
     title: PropTypes.string,
     icon: PropTypes.string,       
+  }
+
+  static defaultProps = {
+    icon: settings.defaultColumnIcon,
   }
 
   render() {
